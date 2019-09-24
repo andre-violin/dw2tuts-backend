@@ -1,5 +1,4 @@
 const { Schema, model } = require("mongoose");
-
 const TutoriaisSchema = new Schema(
   {
     titulo: {
@@ -19,5 +18,4 @@ const TutoriaisSchema = new Schema(
     timestamps: true
   }
 );
-
 module.exports = model("Tutoriais", TutoriaisSchema);
