@@ -1,4 +1,5 @@
-const { Schema, model } = require("mongoose");
+const { Schema, model } = require("mongoose")
+
 const TutoriaisSchema = new Schema(
   {
     titulo: {
@@ -6,8 +7,8 @@ const TutoriaisSchema = new Schema(
       required: true
     },
     autor: {
-      type: String,
-      required: true
+      type: Schema.Types.ObjectId,
+      ref: "User"
     },
     conteudo: {
       type: String,
@@ -17,5 +18,5 @@ const TutoriaisSchema = new Schema(
   {
     timestamps: true
   }
-);
-module.exports = model("Tutoriais", TutoriaisSchema);
+)
+module.exports = model("Tutoriais", TutoriaisSchema)
